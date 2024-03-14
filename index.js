@@ -286,4 +286,4 @@ let tesla = new ElectricCar("Tesla", "Model S", 2020, 10000, 100);
  */
 
 console.log(tesla.toString());
-// Викликаємо метод toString об'єкту tesla та виводимо в консоль//
+// Викликаємо метод toString об'єкту tesla та виводимо в консоль
