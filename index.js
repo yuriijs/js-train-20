@@ -161,7 +161,7 @@ function Truck(
   // Записуєм в this.color значення аргументу color, в this.engineType значення аргументу engineType і так далі зі всіми аргументами
 }
 
-Truck.prototype.specific = function (num) {
+Truck.prototype.tow = function (num) {
   if (num > this.towingCapacity) {
     console.log("Навантаження занадто важке для буксирування");
   } else {
@@ -244,7 +244,7 @@ driveCar(100);
  */
 
 function ElectricCar(brand, model, year, mileage, batteryCapacity) {
-  if (!(this === ElectricCar)) {
+  if (!new.target) {
     throw new Error("Конструктор має бути викликаний з 'new'");
   }
   // Перевіряємо, чи функцію було викликано з new, якщо ні виволимо помилку "Конструктор має бути викликаний з 'new'"
@@ -286,4 +286,4 @@ let tesla = new ElectricCar("Tesla", "Model S", 2020, 10000, 100);
  */
 
 console.log(tesla.toString());
-// Викликаємо метод toString об'єкту tesla та виводимо в консоль
+// Викликаємо метод toString об'єкту tesla та виводимо в консоль//
